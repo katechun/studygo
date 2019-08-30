@@ -8,10 +8,12 @@ func main() {
 	done := make(chan int)
 
 	go func() {
-		println("你好")
+		fmt.Println("你好")
 		done <- 1
 	}()
 	m := <-done
 
 	fmt.Println(m)
+
+	fmt.Println("结束")
 }
