@@ -22,4 +22,9 @@ func main() {
 
 	fmt.Println("-----------------------------")
 	fmt.Printf("%#v\n", []byte("hello,世界"))
+
+	fmt.Println("--------------------------------")
+	for i, c := range "\xe4\x00\x00\xe7\x95\x8cabc" {
+		fmt.Println(i, c)
+	}
 }
