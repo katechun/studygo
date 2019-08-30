@@ -27,4 +27,19 @@ func main() {
 	for i, c := range "\xe4\x00\x00\xe7\x95\x8cabc" {
 		fmt.Println(i, c)
 	}
+
+	fmt.Println("------------------------------")
+	for i, c := range []byte("世界abc") {
+		fmt.Println(i, c)
+	}
+
+	fmt.Println("------------------------------")
+	a := []rune("世界")
+	b := []byte("世界")
+	fmt.Println("a:", len(a), "  b:", len(b))
+
+	fmt.Println("-------------------")
+	c := "dfdfd好"
+	by := []rune(c)
+	fmt.Println(len(c), len(by))
 }
